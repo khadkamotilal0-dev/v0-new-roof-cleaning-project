@@ -20,11 +20,11 @@ export function Hero() {
   return (
     <section className="relative flex min-h-screen flex-col">
       <img
-        src="/images/roof-hero.png"
-        alt="Before and after comparison of a roof cleaning, showing dirty stained tiles transformed to clean restored tiles"
+        src="/images/roof-hero-real.jpg"
+        alt="Before and after comparison of a roof cleaning, showing dirty moss-covered tiles transformed to clean restored terracotta tiles"
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-navy/70" aria-hidden="true" />
+      <div className="absolute inset-0 bg-black/75" aria-hidden="true" />
 
       <div className="relative z-10 flex flex-1 flex-col items-center px-4 pt-10 pb-16 text-center">
         {/* Brand */}
