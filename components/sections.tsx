@@ -162,15 +162,15 @@ export function Transformations() {
   ]
   return (
     <section className="pb-10">
-      <div className="mb-6 bg-[#0f2a4a] px-4 py-8 text-center">
+      <div className="mb-6 bg-background px-4 py-8 text-center">
         <h2
-          className="text-balance text-4xl font-bold uppercase leading-tight tracking-wide text-background md:text-6xl"
+          className="text-balance text-4xl font-bold uppercase leading-tight tracking-wide text-[#002844] md:text-6xl"
           style={{ fontFamily: 'Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif' }}
         >
           <span className="block">See the Difference Our</span>
           <span className="block">Roof Cleaning Makes</span>
         </h2>
-        <p className="mt-3 font-sans text-sm font-bold uppercase text-background/90 md:text-base">
+        <p className="mt-3 font-sans text-sm font-bold uppercase text-[#002844] md:text-base">
           <span className="block">Roof cleaning results from</span>
           <span className="block">homes across Adelaide</span>
         </p>

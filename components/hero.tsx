@@ -26,13 +26,13 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-black/85" aria-hidden="true" />
 
-      <div className="relative z-10 flex flex-1 flex-col items-center px-4 pt-10 pb-16 text-center">
+      <div className="relative z-10 flex flex-1 flex-col items-center px-4 pt-4 pb-16 text-center">
         {/* Brand */}
-        <div className="mb-8 flex items-center justify-center">
+        <div className="-mb-2 flex items-center justify-center">
           <img
             src="/images/logo-white.png"
             alt="EverBright Pressure Washing & Roof Cleaning logo"
-            className="h-24 w-auto md:h-28"
+            className="h-44 w-auto md:h-56"
           />
         </div>
 
