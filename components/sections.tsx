@@ -160,6 +160,7 @@ export function Transformations() {
     { src: "/images/ba-2.png", alt: "Before and after roof cleaning of a suburban Adelaide tile roof with solar panels, from dark mossy tiles to clean orange tiles", aspect: "1414/918" },
     { src: "/images/ba-3.png", alt: "Before and after roof cleaning showing tiles caked in moss and debris restored to clean orange tiles", aspect: "1414/918" },
   ]
+  const scrollToForm = () => document.getElementById("assessment")?.scrollIntoView({ behavior: "smooth" })
   return (
     <section className="pb-10">
       <div className="mb-6 bg-background px-4 py-8 text-center">
@@ -186,6 +187,17 @@ export function Transformations() {
             />
           </div>
         ))}
+      </div>
+      <div className="mt-8 flex flex-col items-center px-4 text-center">
+        <button
+          onClick={scrollToForm}
+          className="w-full max-w-sm rounded-lg bg-brand px-6 py-4 text-base font-bold uppercase tracking-wide text-background shadow-lg transition-colors hover:bg-brand/90"
+        >
+          Get My Free Roof Quote
+        </button>
+        <p className="mt-3 text-xs text-muted-foreground">
+          No obligation. We reply within 24 hours.
+        </p>
       </div>
     </section>
   )

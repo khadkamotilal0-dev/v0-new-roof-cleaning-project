@@ -29,7 +29,7 @@ export function Hero() {
 
       <div className="relative z-10 flex flex-1 flex-col items-center px-4 pt-0 pb-16 text-center">
         {/* Brand */}
-        <div className="-mb-8 -mt-6 flex items-center justify-center md:-mt-8">
+        <div className="-mb-10 -mt-8 flex items-center justify-center md:-mt-10">
           <img
             src="/images/logo-white.png"
             alt="EverBright Pressure Washing & Roof Cleaning logo"
@@ -37,7 +37,7 @@ export function Hero() {
           />
         </div>
 
-        <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-brand md:text-sm">
+        <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-brand md:text-xs">
           Attention Adelaide Homeowners
         </p>
 
