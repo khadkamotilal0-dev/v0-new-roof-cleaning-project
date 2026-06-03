@@ -16,7 +16,7 @@ export function StatsStrip() {
               <div className="font-[family-name:var(--font-slab)] text-3xl font-extrabold leading-none text-card-foreground md:text-4xl">
                 {item.num}
               </div>
-              <div className="mt-1 text-xs font-medium text-muted-foreground md:text-sm">{item.label}</div>
+              <div className="mt-1 text-sm font-medium text-muted-foreground md:text-base">{item.label}</div>
             </div>
           </div>
         ))}
