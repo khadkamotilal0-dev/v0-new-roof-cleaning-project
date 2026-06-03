@@ -26,9 +26,9 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-black/85" aria-hidden="true" />
 
-      <div className="relative z-10 flex flex-1 flex-col items-center px-4 pt-4 pb-16 text-center">
+      <div className="relative z-10 flex flex-1 flex-col items-center px-4 pt-0 pb-16 text-center">
         {/* Brand */}
-        <div className="-mb-2 flex items-center justify-center">
+        <div className="-mb-6 -mt-12 flex items-center justify-center md:-mt-14">
           <img
             src="/images/logo-white.png"
             alt="EverBright Pressure Washing & Roof Cleaning logo"
@@ -36,17 +36,17 @@ export function Hero() {
           />
         </div>
 
-        <p className="mb-5 text-xs font-bold uppercase tracking-[0.25em] text-brand md:text-sm">
+        <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-brand md:text-sm">
           Attention Adelaide Homeowners
         </p>
 
-        <h1 className="mb-4 max-w-4xl text-pretty font-[family-name:var(--font-poppins)] text-3xl font-bold uppercase leading-[1.1] tracking-tight text-background md:text-5xl">
+        <h1 className="mb-3 max-w-4xl text-pretty font-[family-name:var(--font-poppins)] text-3xl font-bold uppercase leading-[1.1] tracking-tight text-background md:text-5xl">
           <span className="block">Erase ugly roof stains</span>
           <span className="block">and make your home</span>
           <span className="block text-brand">look cared for</span>
         </h1>
 
-        <p className="mb-8 max-w-md text-pretty text-base font-light leading-relaxed text-background/90 md:text-lg">
+        <p className="mb-5 max-w-md text-pretty text-base font-light leading-relaxed text-background/90 md:text-lg">
           <span className="block">
             Professional Roof Cleaning in <strong className="font-semibold">Adelaide</strong>
           </span>
