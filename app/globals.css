@@ -8,6 +8,7 @@
   --font-heading: var(--font-bebas);
   --font-slab: var(--font-slab), Georgia, 'Times New Roman', serif;
   --font-playfair: var(--font-playfair), Georgia, serif;
+  --font-anton: var(--font-anton), 'Arial Narrow', sans-serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-brand: var(--brand);

@@ -1,7 +1,14 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
-import { Bebas_Neue, Inter, Roboto_Slab, Playfair_Display } from 'next/font/google'
+import { Bebas_Neue, Inter, Roboto_Slab, Playfair_Display, Anton } from 'next/font/google'
 import './globals.css'
+
+const anton = Anton({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-anton',
+  display: 'swap',
+})
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -60,7 +67,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`bg-background ${inter.variable} ${bebas.variable} ${robotoSlab.variable} ${playfair.variable}`}>
+    <html lang="en" className={`bg-background ${inter.variable} ${bebas.variable} ${robotoSlab.variable} ${playfair.variable} ${anton.variable}`}>
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

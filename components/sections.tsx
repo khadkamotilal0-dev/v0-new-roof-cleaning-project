@@ -61,7 +61,7 @@ export function Transformations() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-10">
       <div className="mb-6 text-center">
-        <h2 className="text-balance font-sans text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">
+        <h2 className="text-balance font-[family-name:var(--font-anton)] text-4xl italic uppercase tracking-wide text-foreground md:text-6xl">
           See the Difference Our Roof Cleaning Makes
         </h2>
         <p className="mt-4 font-sans text-lg font-semibold text-foreground md:text-xl">
