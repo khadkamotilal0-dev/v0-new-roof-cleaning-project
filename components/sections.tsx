@@ -13,7 +13,9 @@ export function StatsStrip() {
           <div key={item.label} className="flex flex-1 items-center justify-center gap-3 px-3 py-5">
             <div className="flex-shrink-0">{item.icon}</div>
             <div>
-              <div className="font-heading text-2xl leading-none text-card-foreground md:text-3xl">{item.num}</div>
+              <div className="font-[family-name:var(--font-slab)] text-3xl font-extrabold leading-none text-card-foreground md:text-4xl">
+                {item.num}
+              </div>
               <div className="mt-1 text-xs font-medium text-muted-foreground md:text-sm">{item.label}</div>
             </div>
           </div>
