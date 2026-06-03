@@ -7,6 +7,7 @@ const OPTIONS = [
   "Moss or algae buildup",
   "General dirt or discoloration",
   "Roof looks old or neglected",
+  "I'm not sure",
 ]
 
 export function Hero() {
