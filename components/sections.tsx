@@ -1,3 +1,5 @@
+"use client"
+
 import { CheckIcon, GoogleIcon, HouseIcon, HourglassIcon, StarIcon } from "@/components/icons"
 
 export function StatsStrip() {
@@ -27,26 +29,52 @@ export function StatsStrip() {
 
 export function HowItWorks() {
   const steps = [
-    { num: "01", title: "Fill in your details", desc: "Tell us your name, phone, email and address below. Takes about 30 seconds." },
-    { num: "02", title: "We assess your roof", desc: "We come out to your property in Adelaide or surrounds and inspect your roof at no cost." },
-    { num: "03", title: "Exact price, no surprises", desc: "You get a clear, fixed quote. We only proceed when you're completely happy with it." },
+    {
+      num: "1",
+      title: "Fill in Your Details",
+      desc: "Tell us your name and the best way to reach you. It takes about 30 seconds, with no obligation.",
+    },
+    {
+      num: "2",
+      title: "We Assess Your Roof",
+      desc: "We visit your home in Adelaide or surrounds and check your roof in person, completely free.",
+    },
+    {
+      num: "3",
+      title: "Get a Clear, Fixed Price",
+      desc: "You receive a straightforward quote with no surprises. We only get started once you're happy.",
+    },
   ]
+  const scrollToForm = () => document.getElementById("assessment")?.scrollIntoView({ behavior: "smooth" })
   return (
     <section className="mx-auto max-w-5xl px-4 py-20">
       <div className="mb-12 text-center">
-        <p className="mb-2 text-xs font-bold uppercase tracking-[0.25em] text-brand">How it works</p>
-        <h2 className="font-heading text-4xl tracking-wide text-foreground md:text-5xl">
+        <p className="mb-2 text-xs font-extrabold uppercase tracking-[0.25em] text-brand">How it works</p>
+        <h2 className="font-heading text-4xl font-extrabold tracking-wide text-foreground md:text-6xl">
           Three simple steps to a clean roof
         </h2>
       </div>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
         {steps.map((s) => (
           <div key={s.num} className="rounded-lg border border-border bg-secondary p-6 text-left">
-            <div className="mb-3 font-heading text-5xl leading-none text-brand/30">{s.num}</div>
-            <h3 className="mb-2 font-bold text-foreground">{s.title}</h3>
+            <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-[#0f2a4a] font-heading text-3xl leading-none text-background">
+              {s.num}
+            </div>
+            <h3 className="mb-2 text-lg font-bold text-foreground">{s.title}</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
           </div>
         ))}
+      </div>
+      <div className="mt-12 flex flex-col items-center gap-5 rounded-lg bg-[#0f2a4a] px-6 py-10 text-center">
+        <p className="text-balance text-xl font-bold text-background md:text-2xl">
+          Ready for a roof that looks fresh from the street?
+        </p>
+        <button
+          onClick={scrollToForm}
+          className="rounded-md bg-brand px-8 py-3 text-base font-bold text-brand-foreground transition-opacity hover:opacity-90"
+        >
+          Get your free quote today
+        </button>
       </div>
     </section>
   )
