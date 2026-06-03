@@ -39,11 +39,13 @@ export function Hero() {
         </p>
 
         <h1
-          className="mb-4 max-w-3xl text-balance text-5xl font-bold uppercase leading-[0.9] tracking-tight text-background md:text-7xl"
+          className="mb-4 max-w-3xl text-pretty text-3xl font-bold uppercase leading-[0.95] tracking-tight text-background md:text-5xl"
           style={{ fontFamily: 'Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif' }}
         >
-          Erase ugly roof stains and make your home{" "}
-          <span className="text-brand">look cared for</span>
+          <span className="block">Erase ugly roof stains and</span>
+          <span className="block">
+            make your home <span className="text-brand">look cared for</span>
+          </span>
         </h1>
 
         <p className="mb-8 max-w-md text-pretty text-sm font-light leading-relaxed text-background/90 md:text-base">
