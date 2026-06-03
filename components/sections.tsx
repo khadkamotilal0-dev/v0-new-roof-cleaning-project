@@ -51,7 +51,7 @@ export function HowItWorks() {
     <section className="mx-auto max-w-5xl px-4 py-20">
       <div className="mb-12 text-center">
         <p className="mb-2 text-xs font-extrabold uppercase tracking-[0.25em] text-brand">How it works</p>
-        <h2 className="font-heading text-4xl font-extrabold tracking-wide text-foreground md:text-6xl">
+        <h2 className="font-heading text-5xl font-extrabold tracking-wide text-[#0f2a4a] md:text-7xl">
           Three simple steps to a clean roof
         </h2>
       </div>
@@ -62,7 +62,7 @@ export function HowItWorks() {
               {s.num}
             </div>
             <h3 className="mb-2 text-lg font-bold text-foreground">{s.title}</h3>
-            <p className="text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+            <p className="text-sm leading-relaxed text-foreground">{s.desc}</p>
           </div>
         ))}
       </div>
@@ -114,10 +114,10 @@ export function FAQ() {
       <div className="mx-auto max-w-3xl px-4">
         <div className="mb-10 text-center">
           <p className="mb-2 text-xs font-extrabold uppercase tracking-[0.25em] text-brand">FAQ</p>
-          <h2 className="text-balance font-heading text-4xl tracking-wide text-foreground md:text-5xl">
+          <h2 className="text-balance font-heading text-5xl tracking-wide text-[#3b82f6] md:text-7xl">
             Frequently Asked Questions
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-pretty text-sm leading-relaxed text-muted-foreground md:text-base">
+          <p className="mx-auto mt-3 max-w-xl text-pretty text-sm leading-relaxed text-foreground md:text-base">
             Thinking about a fresh, clean roof? Here are quick answers to what Adelaide homeowners ask us most.
           </p>
         </div>
@@ -143,7 +143,7 @@ export function FAQ() {
                   className={`grid transition-all duration-200 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
                 >
                   <div className="overflow-hidden">
-                    <p className="px-5 pb-5 text-sm leading-relaxed text-muted-foreground">{faq.a}</p>
+                    <p className="px-5 pb-5 text-sm leading-relaxed text-foreground">{faq.a}</p>
                   </div>
                 </div>
               </div>
@@ -157,15 +157,19 @@ export function FAQ() {
 
 export function Transformations() {
   const items = [
-    { src: "/images/ba-1.png", alt: "Before and after roof cleaning of a red tile roof, transformed from heavy moss and lichen to vibrant clean tiles", aspect: "1414/895" },
+    { src: "/images/ba-1.png", alt: "Before and after roof cleaning of a red tile roof, transformed from heavy moss and lichen to vibrant clean tiles", aspect: "1414/850" },
     { src: "/images/ba-2.png", alt: "Before and after roof cleaning of a suburban Adelaide tile roof with solar panels, from dark mossy tiles to clean orange tiles", aspect: "1414/918" },
     { src: "/images/ba-3.png", alt: "Before and after roof cleaning showing tiles caked in moss and debris restored to clean orange tiles", aspect: "1414/918" },
   ]
   return (
     <section className="pb-10">
       <div className="mb-6 bg-[#0f2a4a] px-4 py-8 text-center">
-        <h2 className="text-balance font-heading text-3xl tracking-wide text-background md:text-5xl">
-          See the Difference Our Roof Cleaning Makes
+        <h2
+          className="text-balance text-4xl font-bold uppercase leading-tight tracking-wide text-background md:text-6xl"
+          style={{ fontFamily: 'Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif' }}
+        >
+          <span className="block">See the Difference Our</span>
+          <span className="block">Roof Cleaning Makes</span>
         </h2>
         <p className="mt-3 font-sans text-sm font-bold uppercase text-background/90 md:text-base">
           <span className="block">Roof cleaning results from</span>
@@ -191,22 +195,22 @@ export function Transformations() {
 export function Reviews() {
   const reviews = [
     {
-      name: "Sarah Mitchell",
+      name: "Sarah M.",
       location: "Burnside, SA",
       text: "EverBright did an incredible job on our tile roof. Years of moss and lichen completely gone — it looks brand new. Professional, on time and great value. Highly recommend!",
     },
     {
-      name: "David Thompson",
+      name: "David T.",
       location: "Glenelg, SA",
       text: "Fantastic service from start to finish. The team was friendly, gave me a clear fixed quote with no surprises, and the result was outstanding. Our roof has never looked better.",
     },
     {
-      name: "Emma Robinson",
+      name: "Emma R.",
       location: "Norwood, SA",
       text: "Could not be happier with the roof clean. They were thorough, tidy and respectful of our property. The before and after photos honestly speak for themselves. Five stars!",
     },
     {
-      name: "Michael Chen",
+      name: "Michael C.",
       location: "Prospect, SA",
       text: "Booked EverBright after seeing their work on a neighbour's roof. They turned up on time, worked safely and transformed our roof completely. Excellent communication throughout.",
     },
