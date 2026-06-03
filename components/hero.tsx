@@ -81,7 +81,7 @@ export function Hero() {
             onClick={scrollToForm}
             className="mt-4 w-full rounded-md bg-brand py-3 text-sm font-bold text-brand-foreground transition-opacity hover:opacity-90"
           >
-            Get my free quote →
+            Next →
           </button>
           <p className="mt-3 text-center text-xs text-muted-foreground">
             No obligation. We reply within 24 hours.
