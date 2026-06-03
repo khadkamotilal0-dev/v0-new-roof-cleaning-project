@@ -49,8 +49,12 @@ export function Hero() {
         </h1>
 
         <p className="mb-8 max-w-md text-pretty text-sm font-light leading-relaxed text-background/90 md:text-base">
-          Professional roof cleaning in <strong className="font-semibold">Adelaide</strong> and
-          surrounding areas.
+          <span className="block">
+            Professional Roof Cleaning in <strong className="font-semibold">Adelaide</strong>
+          </span>
+          <span className="block">
+            <strong className="font-semibold">and Surrounding Areas</strong>
+          </span>
         </p>
 
         {/* Quiz card */}
