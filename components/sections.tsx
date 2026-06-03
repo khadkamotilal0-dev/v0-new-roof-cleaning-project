@@ -61,11 +61,10 @@ export function Transformations() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-20">
       <div className="mb-10 text-center">
-        <p className="mb-2 text-xs font-bold uppercase tracking-[0.25em] text-brand">Real results</p>
         <h2 className="font-heading text-4xl tracking-wide text-foreground md:text-5xl">
-          See the Difference a Clean Roof Makes
+          See the Difference Our Roof Cleaning Makes
         </h2>
-        <p className="mt-3 text-sm text-muted-foreground md:text-base">
+        <p className="mt-3 text-lg font-bold text-foreground md:text-xl">
           Roof cleaning results from homes across Adelaide
         </p>
       </div>
