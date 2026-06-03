@@ -38,7 +38,7 @@ export function Hero() {
           Attention Adelaide Homeowners
         </p>
 
-        <h1 className="mb-4 max-w-4xl text-pretty font-[family-name:var(--font-poppins)] text-2xl font-bold uppercase leading-[1.1] tracking-tight text-background md:text-4xl">
+        <h1 className="mb-4 max-w-4xl text-pretty font-[family-name:var(--font-poppins)] text-3xl font-bold uppercase leading-[1.1] tracking-tight text-background md:text-5xl">
           <span className="block">Erase ugly roof stains</span>
           <span className="block">and make your home</span>
           <span className="block text-brand">look cared for</span>
@@ -53,7 +53,7 @@ export function Hero() {
           </span>
         </p>
 
-        <p className="mb-3 text-sm font-extrabold uppercase tracking-[0.15em] text-background md:text-base">
+        <p className="mb-3 text-xs font-extrabold uppercase tracking-[0.15em] text-background md:text-sm">
           Get a fast free roof cleaning quote
         </p>
 
