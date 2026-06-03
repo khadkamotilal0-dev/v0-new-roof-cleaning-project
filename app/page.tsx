@@ -7,8 +7,8 @@ export default function Page() {
     <main className="min-h-screen overflow-x-hidden bg-background">
       <Hero />
       <StatsStrip />
-      <HowItWorks />
       <Transformations />
+      <HowItWorks />
       <AssessmentForm />
       <WhyUs />
       <SiteFooter />

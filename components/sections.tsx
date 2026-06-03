@@ -54,19 +54,29 @@ export function HowItWorks() {
 
 export function Transformations() {
   const items = [
-    { src: "/images/transform-1.png", alt: "Close-up of a roof being pressure washed showing the dirty section next to the freshly cleaned section" },
-    { src: "/images/transform-2.png", alt: "A clean, well-maintained Adelaide home with a spotless roof under blue sky" },
+    { src: "/images/ba-1.png", alt: "Before and after roof cleaning of a red tile roof, transformed from heavy moss and lichen to vibrant clean tiles" },
+    { src: "/images/ba-2.png", alt: "Before and after roof cleaning of a suburban Adelaide tile roof with solar panels, from dark mossy tiles to clean orange tiles" },
+    { src: "/images/ba-3.png", alt: "Before and after roof cleaning showing tiles caked in moss and debris restored to clean orange tiles" },
   ]
   return (
-    <section className="mx-auto max-w-5xl px-4 pb-4">
+    <section className="mx-auto max-w-6xl px-4 py-20">
       <div className="mb-10 text-center">
         <p className="mb-2 text-xs font-bold uppercase tracking-[0.25em] text-brand">Real results</p>
-        <h2 className="font-heading text-4xl tracking-wide text-foreground md:text-5xl">See the difference</h2>
+        <h2 className="font-heading text-4xl tracking-wide text-foreground md:text-5xl">
+          See the Difference a Clean Roof Makes
+        </h2>
+        <p className="mt-3 text-sm text-muted-foreground md:text-base">
+          Roof cleaning results from homes across Adelaide
+        </p>
       </div>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((item) => (
-          <div key={item.src} className="overflow-hidden rounded-lg border border-border">
-            <img src={item.src || "/placeholder.svg"} alt={item.alt} className="h-64 w-full object-cover" />
+          <div key={item.src} className="overflow-hidden rounded-lg border border-border shadow-sm">
+            <img
+              src={item.src || "/placeholder.svg"}
+              alt={item.alt}
+              className="aspect-[1414/918] w-full object-cover object-top"
+            />
           </div>
         ))}
       </div>
