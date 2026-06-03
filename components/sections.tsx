@@ -113,9 +113,8 @@ export function FAQ() {
     <section className="bg-secondary py-20">
       <div className="mx-auto max-w-3xl px-4">
         <div className="mb-10 text-center">
-          <p className="mb-2 text-xs font-extrabold uppercase tracking-[0.25em] text-brand">FAQ</p>
-          <h2 className="text-balance font-heading text-5xl tracking-wide text-[#3b82f6] md:text-7xl">
-            Frequently Asked Questions
+          <h2 className="text-balance font-heading text-6xl tracking-wide text-[#3b82f6] md:text-8xl">
+            FAQ
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-pretty text-sm leading-relaxed text-foreground md:text-base">
             Thinking about a fresh, clean roof? Here are quick answers to what Adelaide homeowners ask us most.

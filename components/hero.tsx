@@ -24,14 +24,16 @@ export function Hero() {
         alt="Before and after comparison of a roof cleaning, showing dirty moss-covered tiles transformed to clean restored terracotta tiles"
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-black/75" aria-hidden="true" />
+      <div className="absolute inset-0 bg-black/85" aria-hidden="true" />
 
       <div className="relative z-10 flex flex-1 flex-col items-center px-4 pt-10 pb-16 text-center">
         {/* Brand */}
-        <div className="mb-8 flex items-center gap-2">
-          <span className="font-heading text-3xl tracking-wide text-background md:text-4xl">
-            EVER<span className="text-brand">BRIGHT</span>
-          </span>
+        <div className="mb-8 flex items-center justify-center">
+          <img
+            src="/images/logo-white.png"
+            alt="EverBright Pressure Washing & Roof Cleaning logo"
+            className="h-24 w-auto md:h-28"
+          />
         </div>
 
         <p className="mb-5 text-xs font-bold uppercase tracking-[0.25em] text-brand md:text-sm">
