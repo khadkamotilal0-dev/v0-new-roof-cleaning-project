@@ -7,8 +7,8 @@ export function StatsStrip() {
     { icon: <HourglassIcon className="text-brand" />, num: "6", label: "Years of experience" },
   ]
   return (
-    <div className="relative z-20 -mt-10 px-4">
-      <div className="mx-auto flex max-w-2xl divide-x divide-border rounded-lg border border-border bg-card shadow-lg">
+    <div className="relative z-20">
+      <div className="flex w-full divide-x divide-border border-y border-border bg-card shadow-lg">
         {stats.map((item) => (
           <div key={item.label} className="flex flex-1 items-center justify-center gap-3 px-3 py-5">
             <div className="flex-shrink-0">{item.icon}</div>
