@@ -59,18 +59,19 @@ export function Transformations() {
     { src: "/images/ba-3.png", alt: "Before and after roof cleaning showing tiles caked in moss and debris restored to clean orange tiles" },
   ]
   return (
-    <section className="mx-auto max-w-6xl px-4 py-10">
-      <div className="mb-6 text-center">
+    <section className="py-10">
+      <div className="mx-auto mb-6 max-w-6xl px-4 text-center">
         <h2 className="text-balance font-[family-name:var(--font-anton)] text-4xl uppercase tracking-wide text-foreground md:text-6xl">
           See the Difference Our Roof Cleaning Makes
         </h2>
-        <p className="mt-4 font-sans text-lg font-semibold text-foreground md:text-xl">
-          Roof cleaning results from homes across Adelaide
+        <p className="mt-4 font-sans text-lg font-bold text-foreground md:text-xl">
+          <span className="block">Roof cleaning results from</span>
+          <span className="block">homes across Adelaide</span>
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 sm:grid-cols-3">
         {items.map((item) => (
-          <div key={item.src} className="overflow-hidden rounded-lg border border-border shadow-sm">
+          <div key={item.src} className="overflow-hidden">
             <img
               src={item.src || "/placeholder.svg"}
               alt={item.alt}
