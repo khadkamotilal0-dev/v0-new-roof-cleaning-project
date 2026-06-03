@@ -39,7 +39,7 @@ export function Hero() {
         </p>
 
         <h1
-          className="mb-4 max-w-3xl text-pretty text-3xl font-bold uppercase leading-[0.95] tracking-tight text-background md:text-5xl"
+          className="mb-4 max-w-4xl text-pretty text-4xl font-bold uppercase leading-[0.95] tracking-tight text-background md:text-6xl"
           style={{ fontFamily: 'Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif' }}
         >
           <span className="block">Erase ugly roof stains and</span>
