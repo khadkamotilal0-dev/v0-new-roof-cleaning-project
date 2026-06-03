@@ -1,4 +1,5 @@
 import { CheckIcon, GoogleIcon, HouseIcon, HourglassIcon } from "@/components/icons"
+import { Logo } from "@/components/logo"
 
 export function StatsStrip() {
   const stats = [
@@ -121,9 +122,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-secondary px-4 py-8">
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-3 text-center md:flex-row">
-        <span className="font-heading text-2xl tracking-wide text-foreground">
-          EVER<span className="text-brand">BRIGHT</span>
-        </span>
+        <Logo className="text-foreground" />
         <p className="text-xs text-muted-foreground">Serving Adelaide &amp; surrounding areas</p>
         <p className="text-xs text-muted-foreground">© 2025 EverBright Pressure Washing</p>
       </div>
