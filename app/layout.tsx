@@ -1,7 +1,14 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
-import { Bebas_Neue, Inter, Roboto_Slab, Playfair_Display, Anton } from 'next/font/google'
+import { Bebas_Neue, Inter, Roboto_Slab, Playfair_Display, Anton, Poppins } from 'next/font/google'
 import './globals.css'
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['600', '700', '800'],
+  variable: '--font-poppins',
+  display: 'swap',
+})
 
 const anton = Anton({
   subsets: ['latin'],
@@ -67,7 +74,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`bg-background ${inter.variable} ${bebas.variable} ${robotoSlab.variable} ${playfair.variable} ${anton.variable}`}>
+    <html lang="en" className={`bg-background ${inter.variable} ${bebas.variable} ${robotoSlab.variable} ${playfair.variable} ${anton.variable} ${poppins.variable}`}>
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
