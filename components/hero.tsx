@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { PhoneIcon } from "@/components/icons"
 
 const OPTIONS = [
   "Black streaks or stains",
@@ -28,7 +29,7 @@ export function Hero() {
 
       <div className="relative z-10 flex flex-1 flex-col items-center px-4 pt-0 pb-16 text-center">
         {/* Brand */}
-        <div className="-mb-6 -mt-12 flex items-center justify-center md:-mt-14">
+        <div className="-mb-8 -mt-6 flex items-center justify-center md:-mt-8">
           <img
             src="/images/logo-white.png"
             alt="EverBright Pressure Washing & Roof Cleaning logo"
@@ -89,6 +90,16 @@ export function Hero() {
             No obligation. We reply within 24 hours.
           </p>
         </div>
+
+        <a
+          href="tel:0411017366"
+          className="mt-4 flex w-full max-w-xs items-center justify-center gap-2 rounded-lg border border-background/30 bg-background/10 px-4 py-3 text-sm font-semibold text-background backdrop-blur-sm transition-colors hover:bg-background/20"
+        >
+          <PhoneIcon className="text-brand" />
+          <span>
+            Prefer to call? <span className="font-bold">0411 017 366</span>
+          </span>
+        </a>
       </div>
     </section>
   )
