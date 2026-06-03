@@ -1,6 +1,7 @@
 "use client"
 
-import { CheckIcon, GoogleIcon, HouseIcon, HourglassIcon, StarIcon } from "@/components/icons"
+import { useState } from "react"
+import { CheckIcon, GoogleIcon, HouseIcon, HourglassIcon, StarIcon, PlusIcon } from "@/components/icons"
 
 export function StatsStrip() {
   const stats = [
@@ -80,6 +81,80 @@ export function HowItWorks() {
   )
 }
 
+export function FAQ() {
+  const faqs = [
+    {
+      q: "Is roof cleaning safe for my roof?",
+      a: "Yes. We use a gentle, low-pressure method matched to your roof type, so your tiles or metal stay protected. It lifts away stains, moss, and grime without harsh blasting or damage.",
+    },
+    {
+      q: "Is the quote really free?",
+      a: "It is. We come out, look at your roof properly, and give you a clear fixed price with no obligation. There's no cost to get a quote and no pressure to go ahead.",
+    },
+    {
+      q: "Do I need to be home for the clean?",
+      a: "Not always. We do need access to your property and roof, but many homeowners are happy to leave us to it. Just let us know what suits you when we book.",
+    },
+    {
+      q: "How long does a roof clean take?",
+      a: "Most homes are done in a single visit, often within a few hours depending on the size and condition of your roof. We'll give you a clear time estimate with your quote.",
+    },
+    {
+      q: "Will it actually make a difference I can see?",
+      a: "Yes, and the change is usually striking. Removing years of stains and streaks instantly brightens your roof and makes your whole home look cleaner and well cared for from the street.",
+    },
+    {
+      q: "Do you cover my area?",
+      a: "We clean roofs right across Adelaide and the surrounding suburbs. Not sure if you're in our patch? Just ask when you request your quote and we'll let you know.",
+    },
+  ]
+  const [open, setOpen] = useState<number | null>(0)
+  return (
+    <section className="bg-secondary py-20">
+      <div className="mx-auto max-w-3xl px-4">
+        <div className="mb-10 text-center">
+          <p className="mb-2 text-xs font-extrabold uppercase tracking-[0.25em] text-brand">FAQ</p>
+          <h2 className="text-balance font-heading text-4xl tracking-wide text-foreground md:text-5xl">
+            Frequently Asked Questions
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-pretty text-sm leading-relaxed text-muted-foreground md:text-base">
+            Thinking about a fresh, clean roof? Here are quick answers to what Adelaide homeowners ask us most.
+          </p>
+        </div>
+        <div className="flex flex-col gap-3">
+          {faqs.map((faq, i) => {
+            const isOpen = open === i
+            return (
+              <div
+                key={faq.q}
+                className="overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-colors"
+              >
+                <button
+                  onClick={() => setOpen(isOpen ? null : i)}
+                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+                  aria-expanded={isOpen}
+                >
+                  <span className="text-sm font-bold text-card-foreground md:text-base">{faq.q}</span>
+                  <PlusIcon
+                    className={`shrink-0 text-brand transition-transform duration-200 ${isOpen ? "rotate-45" : ""}`}
+                  />
+                </button>
+                <div
+                  className={`grid transition-all duration-200 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
+                >
+                  <div className="overflow-hidden">
+                    <p className="px-5 pb-5 text-sm leading-relaxed text-muted-foreground">{faq.a}</p>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 export function Transformations() {
   const items = [
     { src: "/images/ba-1.png", alt: "Before and after roof cleaning of a red tile roof, transformed from heavy moss and lichen to vibrant clean tiles", aspect: "1414/895" },
@@ -87,12 +162,14 @@ export function Transformations() {
     { src: "/images/ba-3.png", alt: "Before and after roof cleaning showing tiles caked in moss and debris restored to clean orange tiles", aspect: "1414/918" },
   ]
   return (
-    <section className="py-10">
-      <div className="mx-auto mb-6 max-w-6xl px-4 text-center">
-        <h2 className="text-balance font-[family-name:var(--font-anton)] text-4xl uppercase tracking-wide text-foreground md:text-6xl">
+    <section className="pb-10">
+      <div className="bg-[#0f2a4a] px-4 py-8 text-center">
+        <h2 className="text-balance font-heading text-4xl tracking-wide text-background md:text-6xl">
           See the Difference Our Roof Cleaning Makes
         </h2>
-        <p className="mt-4 font-sans text-lg font-bold uppercase text-foreground md:text-xl">
+      </div>
+      <div className="mx-auto mb-6 mt-6 max-w-6xl px-4 text-center">
+        <p className="font-sans text-lg font-bold uppercase text-foreground md:text-xl">
           <span className="block">Roof cleaning results from</span>
           <span className="block">homes across Adelaide</span>
         </p>
