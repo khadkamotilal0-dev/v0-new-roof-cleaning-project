@@ -39,13 +39,12 @@ export function Hero() {
         </p>
 
         <h1 className="mb-4 max-w-4xl text-pretty font-[family-name:var(--font-poppins)] text-2xl font-bold uppercase leading-[1.1] tracking-tight text-background md:text-4xl">
-          <span className="block">Erase ugly roof stains and</span>
-          <span className="block">
-            make your home <span className="text-brand">look cared for</span>
-          </span>
+          <span className="block">Erase ugly roof stains</span>
+          <span className="block">and make your home</span>
+          <span className="block text-brand">look cared for</span>
         </h1>
 
-        <p className="mb-8 max-w-md text-pretty text-sm font-light leading-relaxed text-background/90 md:text-base">
+        <p className="mb-8 max-w-md text-pretty text-base font-light leading-relaxed text-background/90 md:text-lg">
           <span className="block">
             Professional Roof Cleaning in <strong className="font-semibold">Adelaide</strong>
           </span>
@@ -54,17 +53,21 @@ export function Hero() {
           </span>
         </p>
 
+        <p className="mb-3 text-sm font-extrabold uppercase tracking-[0.15em] text-background md:text-base">
+          Get a fast free roof cleaning quote
+        </p>
+
         {/* Quiz card */}
-        <div className="w-full max-w-sm rounded-lg bg-card p-5 text-left shadow-2xl">
-          <p className="mb-4 text-center text-base font-bold leading-snug text-card-foreground">
+        <div className="w-full max-w-xs rounded-lg bg-card p-4 text-left shadow-2xl">
+          <p className="mb-3 text-center text-sm font-bold leading-snug text-card-foreground">
             What does your roof need help with?
           </p>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-1.5">
             {OPTIONS.map((opt) => (
               <button
                 key={opt}
                 onClick={() => setSelected(opt)}
-                className={`w-full rounded-md border px-3 py-2.5 text-left text-sm transition-all ${
+                className={`w-full rounded-md border px-3 py-2 text-left text-sm transition-all ${
                   selected === opt
                     ? "border-brand bg-brand font-semibold text-brand-foreground"
                     : "border-border bg-card text-card-foreground hover:border-brand/50 hover:bg-secondary"
@@ -76,11 +79,11 @@ export function Hero() {
           </div>
           <button
             onClick={scrollToForm}
-            className="mt-4 w-full rounded-md bg-brand py-3 text-sm font-bold text-brand-foreground transition-opacity hover:opacity-90"
+            className="mt-3 w-full rounded-md bg-brand py-2.5 text-sm font-bold text-brand-foreground transition-opacity hover:opacity-90"
           >
             Next →
           </button>
-          <p className="mt-3 text-center text-xs text-muted-foreground">
+          <p className="mt-2 text-center text-xs text-muted-foreground">
             No obligation. We reply within 24 hours.
           </p>
         </div>
