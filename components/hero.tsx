@@ -56,12 +56,11 @@ export function Hero() {
           </span>
         </p>
 
-        <p className="mb-3 text-xs font-extrabold uppercase tracking-[0.15em] text-background md:text-sm">
-          Get a fast free roof cleaning quote
-        </p>
-
         {/* Quiz card */}
         <div className="w-full max-w-xs rounded-lg bg-card p-4 text-left shadow-2xl">
+          <p className="mb-1 text-center text-base font-extrabold uppercase tracking-wide text-brand">
+            Get a fast free quote
+          </p>
           <p className="mb-3 text-center text-sm font-bold leading-snug text-card-foreground">
             What does your roof need help with?
           </p>
