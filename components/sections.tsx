@@ -61,10 +61,10 @@ export function Transformations() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-20">
       <div className="mb-10 text-center">
-        <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-semibold tracking-tight text-foreground md:text-5xl">
+        <h2 className="text-balance font-sans text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">
           See the Difference Our Roof Cleaning Makes
         </h2>
-        <p className="mt-4 font-[family-name:var(--font-playfair)] text-lg font-medium italic text-foreground md:text-xl">
+        <p className="mt-4 font-sans text-lg font-semibold text-foreground md:text-xl">
           Roof cleaning results from homes across Adelaide
         </p>
       </div>
