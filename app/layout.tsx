@@ -1,10 +1,25 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
+import { Bebas_Neue, Inter } from 'next/font/google'
 import './globals.css'
 
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const bebas = Bebas_Neue({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-bebas',
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'EverBright Roof Cleaning | Adelaide Roof Cleaning Experts',
+  description:
+    'Professional roof cleaning in Adelaide and surrounding areas. Erase ugly roof stains, moss and algae. Get a fast, free, no-obligation roof cleaning quote.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -31,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`bg-background ${inter.variable} ${bebas.variable}`}>
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
