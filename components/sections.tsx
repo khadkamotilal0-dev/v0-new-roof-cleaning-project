@@ -59,8 +59,8 @@ export function Transformations() {
     { src: "/images/ba-3.png", alt: "Before and after roof cleaning showing tiles caked in moss and debris restored to clean orange tiles" },
   ]
   return (
-    <section className="mx-auto max-w-6xl px-4 py-20">
-      <div className="mb-10 text-center">
+    <section className="mx-auto max-w-6xl px-4 py-10">
+      <div className="mb-6 text-center">
         <h2 className="text-balance font-sans text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">
           See the Difference Our Roof Cleaning Makes
         </h2>
