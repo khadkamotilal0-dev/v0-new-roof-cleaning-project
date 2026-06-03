@@ -1,6 +1,6 @@
 import { Hero } from "@/components/hero"
 import { AssessmentForm } from "@/components/assessment-form"
-import { StatsStrip, HowItWorks, Transformations, WhyUs, SiteFooter } from "@/components/sections"
+import { StatsStrip, HowItWorks, Transformations, Reviews, WhyUs, SiteFooter } from "@/components/sections"
 
 export default function Page() {
   return (
@@ -8,6 +8,7 @@ export default function Page() {
       <Hero />
       <StatsStrip />
       <Transformations />
+      <Reviews />
       <HowItWorks />
       <AssessmentForm />
       <WhyUs />

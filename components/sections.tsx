@@ -1,4 +1,4 @@
-import { CheckIcon, GoogleIcon, HouseIcon, HourglassIcon } from "@/components/icons"
+import { CheckIcon, GoogleIcon, HouseIcon, HourglassIcon, StarIcon } from "@/components/icons"
 
 export function StatsStrip() {
   const stats = [
@@ -54,9 +54,9 @@ export function HowItWorks() {
 
 export function Transformations() {
   const items = [
-    { src: "/images/ba-1.png", alt: "Before and after roof cleaning of a red tile roof, transformed from heavy moss and lichen to vibrant clean tiles" },
-    { src: "/images/ba-2.png", alt: "Before and after roof cleaning of a suburban Adelaide tile roof with solar panels, from dark mossy tiles to clean orange tiles" },
-    { src: "/images/ba-3.png", alt: "Before and after roof cleaning showing tiles caked in moss and debris restored to clean orange tiles" },
+    { src: "/images/ba-1.png", alt: "Before and after roof cleaning of a red tile roof, transformed from heavy moss and lichen to vibrant clean tiles", aspect: "1414/895" },
+    { src: "/images/ba-2.png", alt: "Before and after roof cleaning of a suburban Adelaide tile roof with solar panels, from dark mossy tiles to clean orange tiles", aspect: "1414/918" },
+    { src: "/images/ba-3.png", alt: "Before and after roof cleaning showing tiles caked in moss and debris restored to clean orange tiles", aspect: "1414/918" },
   ]
   return (
     <section className="py-10">
@@ -64,7 +64,7 @@ export function Transformations() {
         <h2 className="text-balance font-[family-name:var(--font-anton)] text-4xl uppercase tracking-wide text-foreground md:text-6xl">
           See the Difference Our Roof Cleaning Makes
         </h2>
-        <p className="mt-4 font-sans text-lg font-bold text-foreground md:text-xl">
+        <p className="mt-4 font-sans text-lg font-bold uppercase text-foreground md:text-xl">
           <span className="block">Roof cleaning results from</span>
           <span className="block">homes across Adelaide</span>
         </p>
@@ -75,10 +75,75 @@ export function Transformations() {
             <img
               src={item.src || "/placeholder.svg"}
               alt={item.alt}
-              className="aspect-[1414/918] w-full object-cover object-top"
+              style={{ aspectRatio: item.aspect }}
+              className="w-full object-cover object-top"
             />
           </div>
         ))}
+      </div>
+    </section>
+  )
+}
+
+export function Reviews() {
+  const reviews = [
+    {
+      name: "Sarah Mitchell",
+      location: "Burnside, SA",
+      text: "EverBright did an incredible job on our tile roof. Years of moss and lichen completely gone — it looks brand new. Professional, on time and great value. Highly recommend!",
+    },
+    {
+      name: "David Thompson",
+      location: "Glenelg, SA",
+      text: "Fantastic service from start to finish. The team was friendly, gave me a clear fixed quote with no surprises, and the result was outstanding. Our roof has never looked better.",
+    },
+    {
+      name: "Emma Robinson",
+      location: "Norwood, SA",
+      text: "Could not be happier with the roof clean. They were thorough, tidy and respectful of our property. The before and after photos honestly speak for themselves. Five stars!",
+    },
+    {
+      name: "Michael Chen",
+      location: "Prospect, SA",
+      text: "Booked EverBright after seeing their work on a neighbour's roof. They turned up on time, worked safely and transformed our roof completely. Excellent communication throughout.",
+    },
+  ]
+  return (
+    <section className="bg-secondary py-20">
+      <div className="mx-auto max-w-5xl px-4">
+        <div className="mb-12 text-center">
+          <div className="mb-3 flex items-center justify-center gap-2">
+            <GoogleIcon />
+            <div className="flex text-brand">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <StarIcon key={i} className="text-[#FBBC05]" />
+              ))}
+            </div>
+          </div>
+          <h2 className="font-heading text-4xl tracking-wide text-foreground md:text-5xl">What Our Customers Say</h2>
+          <p className="mt-2 text-base font-medium text-muted-foreground md:text-lg">
+            Reviews from Adelaide homeowners
+          </p>
+        </div>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {reviews.map((r) => (
+            <div key={r.name} className="rounded-lg border border-border bg-card p-6 text-left shadow-sm">
+              <div className="mb-3 flex">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <StarIcon key={i} className="text-[#FBBC05]" />
+                ))}
+              </div>
+              <p className="mb-4 text-sm leading-relaxed text-card-foreground">{r.text}</p>
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm font-bold text-foreground">{r.name}</p>
+                  <p className="text-xs text-muted-foreground">{r.location}</p>
+                </div>
+                <GoogleIcon className="opacity-70" />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
