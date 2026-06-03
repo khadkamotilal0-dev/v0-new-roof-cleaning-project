@@ -1,7 +1,14 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
-import { Bebas_Neue, Inter, Roboto_Slab } from 'next/font/google'
+import { Bebas_Neue, Inter, Roboto_Slab, Playfair_Display } from 'next/font/google'
 import './globals.css'
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['500', '600', '700'],
+  variable: '--font-playfair',
+  display: 'swap',
+})
 
 const inter = Inter({
   subsets: ['latin'],
@@ -53,7 +60,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`bg-background ${inter.variable} ${bebas.variable} ${robotoSlab.variable}`}>
+    <html lang="en" className={`bg-background ${inter.variable} ${bebas.variable} ${robotoSlab.variable} ${playfair.variable}`}>
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
