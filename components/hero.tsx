@@ -69,7 +69,7 @@ export function Hero() {
           <span className="block text-brand">look cared for</span>
         </h1>
 
-        <p className="mb-5 max-w-md text-pretty text-base font-light leading-relaxed text-background/90 md:text-lg">
+        <p className="mb-5 max-w-md text-pretty text-sm font-light leading-relaxed text-background/90 md:text-lg">
           <span className="block">
             Professional Roof Cleaning in <strong className="font-semibold">Adelaide</strong>
           </span>
