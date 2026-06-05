@@ -63,7 +63,7 @@ export function Hero() {
           Attention Adelaide Homeowners
         </p>
 
-        <h1 className="mb-3 max-w-4xl text-pretty font-[family-name:var(--font-poppins)] text-3xl font-bold uppercase leading-[1.1] tracking-tight text-background md:text-5xl">
+        <h1 className="mb-3 max-w-4xl font-[family-name:var(--font-poppins)] text-2xl font-bold uppercase leading-[1.15] tracking-tight text-background md:text-5xl md:leading-[1.1]">
           <span className="block">Erase ugly roof stains</span>
           <span className="block">and make your home</span>
           <span className="block text-brand">look cared for</span>
