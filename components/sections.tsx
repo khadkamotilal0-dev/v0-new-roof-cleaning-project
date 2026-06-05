@@ -1,25 +1,30 @@
 "use client"
 
 import { useState } from "react"
-import { CheckIcon, GoogleIcon, HouseIcon, HourglassIcon, StarIcon, PlusIcon } from "@/components/icons"
+import { GoogleIcon, HouseIcon, HourglassIcon, PlusIcon, StarIcon } from "@/components/icons"
 
 export function StatsStrip() {
   const stats = [
     { icon: <GoogleIcon className="text-brand" />, num: "38+", label: "5-star reviews" },
     { icon: <HouseIcon className="text-brand" />, num: "100+", label: "Adelaide roofs cleaned" },
-    { icon: <HourglassIcon className="text-brand" />, num: "6", label: "Years of experience" },
+    { icon: <HourglassIcon className="text-brand" />, num: "Fully insured", label: "Peace of mind" },
   ]
+
   return (
-    <div className="relative z-20">
-      <div className="flex w-full divide-x divide-border border-y border-border bg-card shadow-lg">
+    <div className="relative z-20 w-full px-0">
+      <div className="flex w-full divide-x divide-border border-y border-border bg-card shadow-lg md:rounded-[2rem]">
         {stats.map((item) => (
-          <div key={item.label} className="flex flex-1 items-center justify-center gap-3 px-3 py-5">
+          <div key={item.label} className="flex flex-1 items-center justify-center gap-3 px-3 py-5 md:px-6 md:py-6">
             <div className="flex-shrink-0">{item.icon}</div>
             <div>
-              <div className="font-[family-name:var(--font-slab)] text-3xl font-extrabold leading-none text-card-foreground md:text-4xl">
+              <div
+                className={`font-[family-name:var(--font-slab)] font-extrabold leading-none text-black ${
+                  item.num === "Fully insured" ? "text-2xl md:text-3xl" : "text-3xl md:text-4xl"
+                }`}
+              >
                 {item.num}
               </div>
-              <div className="mt-1 text-sm font-medium text-muted-foreground md:text-base">{item.label}</div>
+              <div className="mt-1 text-xs font-medium text-black md:text-base">{item.label}</div>
             </div>
           </div>
         ))}
@@ -47,17 +52,18 @@ export function HowItWorks() {
     },
   ]
   const scrollToForm = () => document.getElementById("assessment")?.scrollIntoView({ behavior: "smooth" })
+
   return (
-    <section className="mx-auto max-w-5xl px-4 py-20">
+    <section className="mx-auto max-w-5xl px-4 py-20 md:px-8 lg:px-16">
       <div className="mb-12 text-center">
-        <p className="mb-2 text-xs font-extrabold uppercase tracking-[0.25em] text-brand">How it works</p>
+        <p className="mb-2 text-base font-extrabold uppercase tracking-[0.25em] text-brand md:text-lg">How it works</p>
         <h2 className="font-heading text-5xl font-extrabold tracking-wide text-[#0f2a4a] md:text-7xl">
           Three simple steps to a clean roof
         </h2>
       </div>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
         {steps.map((s) => (
-          <div key={s.num} className="rounded-lg border border-border bg-secondary p-6 text-left">
+          <div key={s.num} className="rounded-lg border border-border bg-secondary p-6 text-left md:p-8">
             <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-[#0f2a4a] font-heading text-3xl leading-none text-background">
               {s.num}
             </div>
@@ -66,16 +72,17 @@ export function HowItWorks() {
           </div>
         ))}
       </div>
-      <div className="mt-12 flex flex-col items-center gap-5 rounded-lg bg-[#0f2a4a] px-6 py-10 text-center">
-        <p className="text-balance text-xl font-bold text-background md:text-2xl">
-          Ready for a roof that looks fresh from the street?
+      <div className="mt-12 flex flex-col items-center gap-5 rounded-lg bg-[#0f2a4a] px-6 py-10 text-center md:items-start md:px-10 md:text-left">
+        <p className="text-balance text-2xl font-extrabold text-background md:text-3xl">
+          Ready To Get Rid Of Ugly Roof Stains For Good?
         </p>
-        <button
+        <a
+          href="#assessment"
           onClick={scrollToForm}
           className="rounded-md bg-brand px-8 py-3 text-base font-bold text-brand-foreground transition-opacity hover:opacity-90"
         >
-          Get your free quote today
-        </button>
+          Get My Free Roof Quote
+        </a>
       </div>
     </section>
   )
@@ -108,46 +115,51 @@ export function FAQ() {
       a: "We clean roofs right across Adelaide and the surrounding suburbs. Not sure if you're in our patch? Just ask when you request your quote and we'll let you know.",
     },
   ]
-  const [open, setOpen] = useState<number | null>(0)
+  const [open, setOpen] = useState<number | null>(null)
+  const columns = [faqs.slice(0, 3), faqs.slice(3)]
+
   return (
     <section className="bg-secondary py-20">
-      <div className="mx-auto max-w-3xl px-4">
+      <div className="mx-auto max-w-3xl px-4 md:max-w-6xl md:px-6">
         <div className="mb-10 text-center">
-          <h2 className="text-balance font-heading text-6xl tracking-wide text-[#3b82f6] md:text-8xl">
-            FAQ
-          </h2>
+          <h2 className="text-balance font-heading text-6xl tracking-wide text-brand md:text-8xl">FAQ</h2>
           <p className="mx-auto mt-3 max-w-xl text-pretty text-sm leading-relaxed text-foreground md:text-base">
             Thinking about a fresh, clean roof? Here are quick answers to what Adelaide homeowners ask us most.
           </p>
         </div>
-        <div className="flex flex-col gap-3">
-          {faqs.map((faq, i) => {
-            const isOpen = open === i
-            return (
-              <div
-                key={faq.q}
-                className="overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-colors"
-              >
-                <button
-                  onClick={() => setOpen(isOpen ? null : i)}
-                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
-                  aria-expanded={isOpen}
-                >
-                  <span className="text-sm font-bold text-card-foreground md:text-base">{faq.q}</span>
-                  <PlusIcon
-                    className={`shrink-0 text-brand transition-transform duration-200 ${isOpen ? "rotate-45" : ""}`}
-                  />
-                </button>
-                <div
-                  className={`grid transition-all duration-200 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
-                >
-                  <div className="overflow-hidden">
-                    <p className="px-5 pb-5 text-sm leading-relaxed text-foreground">{faq.a}</p>
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:items-start md:gap-4">
+          {columns.map((column, columnIndex) => (
+            <div key={columnIndex} className="flex flex-col gap-3">
+              {column.map((faq, itemIndex) => {
+                const i = columnIndex * 3 + itemIndex
+                const isOpen = open === i
+
+                return (
+                  <div
+                    key={faq.q}
+                    className="overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-colors"
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setOpen(isOpen ? null : i)}
+                      className="flex w-full cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left hover:bg-secondary/50 active:bg-secondary"
+                      aria-expanded={isOpen}
+                    >
+                      <span className="text-sm font-bold text-card-foreground md:text-base">{faq.q}</span>
+                      <PlusIcon
+                        className={`shrink-0 text-brand transition-transform duration-200 ${isOpen ? "rotate-45" : ""}`}
+                      />
+                    </button>
+                    {isOpen && (
+                      <div className="px-5 pb-5 pt-0 text-sm leading-relaxed text-foreground">
+                        <p>{faq.a}</p>
+                      </div>
+                    )}
                   </div>
-                </div>
-              </div>
-            )
-          })}
+                )
+              })}
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -156,50 +168,71 @@ export function FAQ() {
 
 export function Transformations() {
   const items = [
-    { src: "/images/ba-1.png", alt: "Before and after roof cleaning of a red tile roof, transformed from heavy moss and lichen to vibrant clean tiles", aspect: "1414/850" },
-    { src: "/images/ba-2.png", alt: "Before and after roof cleaning of a suburban Adelaide tile roof with solar panels, from dark mossy tiles to clean orange tiles", aspect: "1414/918" },
-    { src: "/images/ba-3.png", alt: "Before and after roof cleaning showing tiles caked in moss and debris restored to clean orange tiles", aspect: "1414/918" },
+    {
+      src: "/images/ba-1.png",
+      alt: "Before and after roof cleaning of a red tile roof, transformed from heavy moss and lichen to vibrant clean tiles",
+      aspect: "1414/850",
+    },
+    {
+      src: "/images/Copy of Starting at $899-15.png",
+      alt: "Before and after roof cleaning of a suburban Adelaide tile roof with solar panels, before on the left and after on the right",
+      aspect: "1414/918",
+    },
+    {
+      src: "/images/ba-3.png",
+      alt: "Before and after roof cleaning showing tiles caked in moss and debris restored to clean orange tiles",
+      aspect: "1414/918",
+    },
   ]
   const scrollToForm = () => document.getElementById("assessment")?.scrollIntoView({ behavior: "smooth" })
+
   return (
-    <section className="pb-10">
-      <div className="mb-6 bg-background px-4 py-8 text-center">
-        <h2
-          className="text-balance text-4xl font-bold uppercase leading-tight tracking-wide text-[#002844] md:text-6xl"
-          style={{ fontFamily: 'Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif' }}
-        >
-          <span className="block">See the Difference Our</span>
-          <span className="block">Roof Cleaning Makes</span>
-        </h2>
-        <p className="mt-3 font-sans text-sm font-bold uppercase text-[#002844] md:text-base">
-          <span className="block">Roof cleaning results from</span>
-          <span className="block">homes across Adelaide</span>
-        </p>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3">
-        {items.map((item) => (
-          <div key={item.src} className="overflow-hidden">
-            <img
-              src={item.src || "/placeholder.svg"}
-              alt={item.alt}
-              style={{ aspectRatio: item.aspect }}
-              className="w-full object-cover object-top"
-            />
+    <>
+      <section className="pb-0">
+        <div className="mb-6 bg-background px-4 py-8 text-center md:px-8 lg:px-16">
+          <h2
+            className="text-balance text-4xl font-bold uppercase leading-tight tracking-wide text-[#002844] md:text-6xl"
+            style={{ fontFamily: 'Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif' }}
+          >
+            <span className="block">See the Difference Our</span>
+            <span className="block">Roof Cleaning Makes</span>
+          </h2>
+          <p className="mt-3 font-sans text-sm font-bold uppercase text-[#002844] md:text-base">
+            <span className="block">Roof cleaning results from</span>
+            <span className="block">homes across Adelaide</span>
+          </p>
+        </div>
+        <div className="grid grid-cols-1 gap-0 sm:grid-cols-3">
+          {items.map((item) => (
+            <div key={item.src} className="overflow-hidden md:h-[320px]">
+              <img
+                src={item.src || "/placeholder.svg"}
+                alt={item.alt}
+                style={{ aspectRatio: item.aspect }}
+                className="block h-full w-full object-cover object-top"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-[#002844] py-12 text-white">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-2xl font-extrabold text-white md:text-3xl">Ready for a cleaner roof</p>
+            <p className="mt-1 text-2xl font-extrabold text-white md:text-3xl">and a better looking home?</p>
           </div>
-        ))}
-      </div>
-      <div className="mt-8 flex flex-col items-center px-4 text-center">
-        <button
-          onClick={scrollToForm}
-          className="w-full max-w-sm rounded-lg bg-brand px-6 py-4 text-base font-bold uppercase tracking-wide text-background shadow-lg transition-colors hover:bg-brand/90"
-        >
-          Get My Free Roof Quote
-        </button>
-        <p className="mt-3 text-xs text-muted-foreground">
-          No obligation. We reply within 24 hours.
-        </p>
-      </div>
-    </section>
+          <a
+            href="#assessment"
+            onClick={scrollToForm}
+            className="mt-6 rounded-lg bg-brand px-10 py-4 text-xl font-extrabold text-brand-foreground shadow-lg transition-transform hover:scale-[1.02]"
+          >
+            Get My Free Roof Quote
+          </a>
+          <p className="mt-3 text-sm text-[#d7e5ff]">No obligation. We reply within 24 hours.</p>
+        </div>
+      </section>
+    </>
   )
 }
 
@@ -226,9 +259,10 @@ export function Reviews() {
       text: "Booked EverBright after seeing their work on a neighbour's roof. They turned up on time, worked safely and transformed our roof completely. Excellent communication throughout.",
     },
   ]
+
   return (
     <section className="bg-secondary py-20">
-      <div className="mx-auto max-w-5xl px-4">
+      <div className="mx-auto max-w-5xl px-4 md:max-w-6xl md:px-8">
         <div className="mb-12 text-center">
           <div className="mb-3 flex items-center justify-center gap-2">
             <GoogleIcon />
@@ -243,7 +277,7 @@ export function Reviews() {
             Reviews from Adelaide homeowners
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
           {reviews.map((r) => (
             <div key={r.name} className="rounded-lg border border-border bg-card p-6 text-left shadow-sm">
               <div className="mb-3 flex">
@@ -267,60 +301,22 @@ export function Reviews() {
   )
 }
 
-export function WhyUs() {
-  const points = [
-    "Exact, transparent pricing — no hidden fees, ever",
-    "Free on-site assessment before you commit",
-    "Locally operated, Adelaide-based team",
-    "Fully insured with professional equipment",
-  ]
-  const stats = [
-    { num: "38+", label: "Five-star reviews" },
-    { num: "100+", label: "Adelaide roofs cleaned" },
-    { num: "6", label: "Years of experience" },
-    { num: "$0", label: "Cost for your assessment" },
-  ]
+export function ContactUsStrip() {
   return (
-    <section className="bg-navy py-20 text-navy-foreground">
-      <div className="mx-auto grid max-w-4xl grid-cols-1 items-center gap-12 px-4 md:grid-cols-2">
-        <div>
-          <h2 className="mb-4 font-heading text-4xl leading-tight tracking-wide">
-            Why Adelaide homeowners <span className="text-brand">trust EverBright</span>
-          </h2>
-          <p className="mb-6 text-sm font-light leading-relaxed text-navy-foreground/70">
-            Six years of experience cleaning over a hundred roofs right here in Adelaide.
-          </p>
-          <div className="flex flex-col gap-3">
-            {points.map((point) => (
-              <div key={point} className="flex items-start gap-3">
-                <CheckIcon className="mt-0.5 flex-shrink-0 text-brand" />
-                <p className="text-sm font-light text-navy-foreground/90">{point}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="grid grid-cols-2 gap-4">
-          {stats.map((s) => (
-            <div key={s.label} className="rounded-lg border border-white/10 bg-white/5 p-5">
-              <div className="mb-1 font-heading text-3xl leading-none">{s.num}</div>
-              <div className="text-xs text-navy-foreground/60">{s.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
+    <section className="bg-background px-4 py-5 text-center">
+      <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-brand">Contact us</p>
+      <p className="mt-2 text-base font-bold text-[#002844] md:text-lg">0411017366 | Everbright@gmail.com</p>
     </section>
   )
 }
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-secondary px-4 py-8">
-      <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-3 text-center md:flex-row">
-        <span className="font-heading text-2xl tracking-wide text-foreground">
-          EVER<span className="text-brand">BRIGHT</span>
-        </span>
-        <p className="text-xs text-muted-foreground">Serving Adelaide &amp; surrounding areas</p>
-        <p className="text-xs text-muted-foreground">© 2025 EverBright Pressure Washing</p>
+    <footer className="bg-[#002844] px-3 py-1 text-white md:px-6 md:py-2">
+      <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-0 text-center">
+        <img src="/images/logo-white.png" alt="EverBright Pressure Washing logo" className="h-32 w-auto md:h-48" />
+        <p className="-mt-8 text-xs leading-tight md:-mt-14">Serving Adelaide &amp; surrounding areas</p>
+        <p className="text-xs leading-tight">© 2025 EverBright Pressure Washing</p>
       </div>
     </footer>
   )

@@ -29,8 +29,8 @@ export function AssessmentForm() {
   }
 
   return (
-    <section id="assessment" className="border-t border-border bg-secondary px-4 py-20">
-      <div className="mx-auto max-w-lg text-center">
+    <section id="assessment" className="border-t border-border bg-secondary px-4 py-20 md:px-10 lg:px-20">
+      <div className="mx-auto max-w-lg text-center md:max-w-3xl md:text-left">
         <p className="mb-2 text-xs font-bold uppercase tracking-[0.25em] text-brand">Get started</p>
         <h2 className="mb-4 font-heading text-4xl tracking-wide text-foreground md:text-5xl">
           Start your free roof assessment
@@ -50,10 +50,16 @@ export function AssessmentForm() {
             </p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="rounded-lg border border-border bg-card p-6 shadow-sm md:p-8">
+          <form
+            onSubmit={handleSubmit}
+            className="rounded-lg border border-border bg-card p-6 shadow-sm md:grid md:grid-cols-2 md:gap-6 md:p-8"
+          >
             {FIELDS.map((field) => (
               <div key={field.key} className="mb-4 text-left">
-                <label htmlFor={field.key} className="mb-1 block text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                <label
+                  htmlFor={field.key}
+                  className="mb-1 block text-xs font-semibold uppercase tracking-wide text-muted-foreground"
+                >
                   {field.label}
                 </label>
                 <input
@@ -69,11 +75,11 @@ export function AssessmentForm() {
             ))}
             <button
               type="submit"
-              className="mt-2 w-full rounded-md bg-brand py-3 text-sm font-bold tracking-wide text-brand-foreground transition-opacity hover:opacity-90"
+              className="mt-2 w-full rounded-md bg-brand py-3 text-sm font-bold tracking-wide text-brand-foreground transition-opacity hover:opacity-90 md:col-span-2"
             >
               Start my free roof assessment →
             </button>
-            <p className="mt-3 text-center text-xs text-muted-foreground">
+            <p className="mt-3 text-center text-xs text-muted-foreground md:col-span-2 md:text-left">
               No obligation. No payment required. We&apos;ll contact you within 24 hours.
             </p>
           </form>
