@@ -50,7 +50,7 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-black/85" aria-hidden="true" />
 
-      <div className="relative z-10 flex flex-1 flex-col items-center px-4 pb-16 pt-0 text-center md:px-10 md:text-left lg:px-20">
+      <div className="relative z-10 flex flex-1 flex-col items-center px-4 pb-10 pt-0 text-center md:pb-16 md:px-10 md:text-left lg:px-20">
         <div className="-mb-14 -mt-8 flex items-center justify-center md:-mt-10">
           <img
             src="/images/logo-white.png"

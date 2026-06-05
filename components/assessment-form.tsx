@@ -29,13 +29,13 @@ export function AssessmentForm() {
   }
 
   return (
-    <section id="assessment" className="border-t border-border bg-secondary px-4 py-20 md:px-10 lg:px-20">
+    <section id="assessment" className="border-t border-border bg-secondary px-4 py-12 md:px-10 md:py-20 lg:px-20">
       <div className="mx-auto max-w-lg text-center md:max-w-3xl md:text-left">
         <p className="mb-2 text-xs font-bold uppercase tracking-[0.25em] text-brand">Get started</p>
-        <h2 className="mb-4 font-heading text-4xl tracking-wide text-foreground md:text-5xl">
+        <h2 className="mb-3 font-heading text-3xl tracking-wide text-foreground md:mb-4 md:text-5xl">
           Start your free roof assessment
         </h2>
-        <p className="mb-8 text-sm text-muted-foreground">
+        <p className="mb-5 text-sm text-muted-foreground md:mb-8">
           Fill in your details and we&apos;ll be in touch to arrange a time that works for you.
         </p>
 

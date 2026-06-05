@@ -14,17 +14,17 @@ export function StatsStrip() {
     <div className="relative z-20 w-full px-0">
       <div className="flex w-full divide-x divide-border border-y border-border bg-card shadow-lg md:rounded-[2rem]">
         {stats.map((item) => (
-          <div key={item.label} className="flex flex-1 items-center justify-center gap-3 px-3 py-5 md:px-6 md:py-6">
+          <div key={item.label} className="flex flex-1 items-center justify-center gap-1.5 px-2 py-4 md:gap-3 md:px-6 md:py-6">
             <div className="flex-shrink-0">{item.icon}</div>
             <div>
               <div
                 className={`font-[family-name:var(--font-slab)] font-extrabold leading-none text-black ${
-                  item.num === "Fully insured" ? "text-2xl md:text-3xl" : "text-3xl md:text-4xl"
+                  item.num === "Fully insured" ? "text-base md:text-3xl" : "text-xl md:text-4xl"
                 }`}
               >
                 {item.num}
               </div>
-              <div className="mt-1 text-xs font-medium text-black md:text-base">{item.label}</div>
+              <div className="mt-0.5 text-[10px] font-medium text-black md:mt-1 md:text-base">{item.label}</div>
             </div>
           </div>
         ))}
@@ -54,10 +54,10 @@ export function HowItWorks() {
   const scrollToForm = () => document.getElementById("assessment")?.scrollIntoView({ behavior: "smooth" })
 
   return (
-    <section className="mx-auto max-w-5xl px-4 py-20 md:px-8 lg:px-16">
-      <div className="mb-12 text-center">
+    <section className="mx-auto max-w-5xl px-4 py-12 md:px-8 md:py-20 lg:px-16">
+      <div className="mb-8 text-center md:mb-12">
         <p className="mb-2 text-base font-extrabold uppercase tracking-[0.25em] text-brand md:text-lg">How it works</p>
-        <h2 className="font-heading text-5xl font-extrabold tracking-wide text-[#0f2a4a] md:text-7xl">
+        <h2 className="font-heading text-3xl font-extrabold tracking-wide text-[#0f2a4a] md:text-7xl">
           Three simple steps to a clean roof
         </h2>
       </div>
@@ -119,10 +119,10 @@ export function FAQ() {
   const columns = [faqs.slice(0, 3), faqs.slice(3)]
 
   return (
-    <section className="bg-secondary py-20">
+    <section className="bg-secondary py-12 md:py-20">
       <div className="mx-auto max-w-3xl px-4 md:max-w-6xl md:px-6">
-        <div className="mb-10 text-center">
-          <h2 className="text-balance font-heading text-6xl tracking-wide text-brand md:text-8xl">FAQ</h2>
+        <div className="mb-6 text-center md:mb-10">
+          <h2 className="text-balance font-heading text-4xl tracking-wide text-brand md:text-8xl">FAQ</h2>
           <p className="mx-auto mt-3 max-w-xl text-pretty text-sm leading-relaxed text-foreground md:text-base">
             Thinking about a fresh, clean roof? Here are quick answers to what Adelaide homeowners ask us most.
           </p>
@@ -189,7 +189,7 @@ export function Transformations() {
   return (
     <>
       <section className="pb-0">
-        <div className="mb-6 bg-background px-4 py-8 text-center md:px-8 lg:px-16">
+        <div className="mb-6 bg-background px-4 py-5 text-center md:px-8 md:py-8 lg:px-16">
           <h2
             className="text-balance text-4xl font-bold uppercase leading-tight tracking-wide text-[#002844] md:text-6xl"
             style={{ fontFamily: 'Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif' }}
@@ -261,9 +261,9 @@ export function Reviews() {
   ]
 
   return (
-    <section className="bg-secondary py-20">
+    <section className="bg-secondary py-12 md:py-20">
       <div className="mx-auto max-w-5xl px-4 md:max-w-6xl md:px-8">
-        <div className="mb-12 text-center">
+        <div className="mb-8 text-center md:mb-12">
           <div className="mb-3 flex items-center justify-center gap-2">
             <GoogleIcon />
             <div className="flex text-brand">
