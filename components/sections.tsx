@@ -203,8 +203,8 @@ export function Transformations() {
           </p>
         </div>
         <div className="grid grid-cols-1 gap-0 sm:grid-cols-3">
-          {items.map((item) => (
-            <div key={item.src} className="overflow-hidden md:h-[320px]">
+          {items.map((item, index) => (
+            <div key={item.src} className={`overflow-hidden md:h-[320px]${index === 0 ? " border-b-[12px] border-white sm:border-b-0" : ""}`}>
               <img
                 src={item.src || "/placeholder.svg"}
                 alt={item.alt}
